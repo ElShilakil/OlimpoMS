@@ -1,0 +1,29 @@
+Administrador
+
+- Puede dar de alta trabajadores
+
+Empleado
+
+- Registro de entradas
+- Registra ventas
+- Registrar productos si no existen
+
+Modalidades de pago de inscripción
+
+1 dia - Visita $120
+1 semana - $???
+1 mes (30 dias) - $690 normal/$650 estudiante
+
+¿Que se busca con este proyecto?
+
+- Realizar una pagina web que sea accesible desde cualquier navegador, utilizando herramientas de programación eficientes
+- Centralizar los datos de los gimnasios 24 horas de la franquicia
+  - Hercules
+  - Zeus
+  - Gladiator
+  - Olympus
+  - Aquiles
+  - Coliseum
+  - Ares
+- Que cada empleado tenga su usuario para que los movimientos sean rastreables
+
