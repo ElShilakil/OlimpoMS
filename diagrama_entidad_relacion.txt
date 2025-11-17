@@ -1,0 +1,61 @@
+#Para ejecutar en https://dbdiagram.io/d
+
+Table Gimnasio {
+  ID_Gimnasio int [pk, increment]
+  Nombre varchar(100)
+  Direccion varchar(200)
+  Telefono varchar(20)
+}
+
+Table Empleado {
+  ID_Empleado int [pk, increment]
+  ID_Gimnasio int [ref: > Gimnasio.ID_Gimnasio]
+  Nombre varchar(100)
+  APaterno varchar(100)
+  AMaterno varchar(100)
+  Num_Telefono varchar(20)
+  Direccion varchar(200)
+  Fecha_Nac date
+  Fecha_Ingreso date
+}
+
+Table Miembro {
+  ID_Miembro int [pk, increment]
+  ID_Gimnasio int [ref: > Gimnasio.ID_Gimnasio]
+  Nombre varchar(100)
+  APaterno varchar(100)
+  AMaterno varchar(100)
+  Num_Telefono varchar(20)
+  Direccion varchar(200)
+  Fecha_Nac date
+  Fecha_Registro date
+  Foto varchar(200)
+}
+
+Table Membresia {
+  ID_Membresia int [pk, increment]
+  Modalidad varchar(20) // Diaria, Semanal, Mensual
+  Precio decimal(10,2)
+}
+
+Table Inscripcion {
+  ID_Inscripcion int [pk, increment]
+  ID_Miembro int [ref: > Miembro.ID_Miembro]
+  ID_Membresia int [ref: > Membresia.ID_Membresia]
+  Fecha_Inicio date
+  Fecha_Fin date
+  Estado varchar(20) // Activa, Expirada
+}
+
+Table Producto {
+  ID_Producto int [pk, increment]
+  Nombre varchar(100)
+  Precio decimal(10,2)
+}
+
+Table Inventario_Gimnasio {
+  ID_Inventario int [pk, increment]
+  ID_Gimnasio int [ref: > Gimnasio.ID_Gimnasio]
+  ID_Producto int [ref: > Producto.ID_Producto]
+  Cantidad int
+}
